@@ -1,11 +1,15 @@
+{{ config(materialized='table') }}
+
 with 
 cleansed_user as
 (
     select * from {{ ref('clean_user')}}
 ),
+
 cleansed_payments as(
     select * from {{ ref('cleansed_payments')}}
 ),
+
 credit_card_usage_per_country as 
 (
     select ps.country, ps.currency, ps.credit_card_type, count(*) as amount
