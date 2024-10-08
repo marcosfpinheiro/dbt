@@ -1,3 +1,5 @@
+{{ config(materialized='view') }}
+
 with subscription_src as (
     select * from WORKSHOP.WORKSPACE.WORKSPACE_SUBSCRIPTION
 )

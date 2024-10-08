@@ -1,4 +1,0 @@
-{% macro default__get_limit_subquery_sql(sql, limit) %}
-    {{ sql }}
-    limit {{ limit }}
-{% endmacro %}
