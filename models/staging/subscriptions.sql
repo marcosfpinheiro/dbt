@@ -5,6 +5,7 @@ with subscription_src as (
 )
 select
     sb.user_id,
+    sb.plan,
     sb.status,
     sb.payment_term,
     sb.payment_method,
